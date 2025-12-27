@@ -1,0 +1,117 @@
+:root {
+    --deep-blue: #11212D;
+    --vintage-wine: #3F1521;
+    --off-white: #F8F6F3;
+    --soft-gray: #D3D3D3;
+}
+
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: var(--off-white);
+    color: var(--deep-blue)
+}
+
+hader {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+header img {
+    max-width: 150;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--vintage-wine);
+}
+
+#home-audio-intro {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#home-audio-intro h2 {
+    font-family: 'Georgia', serif;
+    color: #3b3c36;
+}
+
+#home-audio-intro p {
+    color: #6b4c4c;
+}
+
+#home-audio-intro audio {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--deep-blue);
+    color: var(--off-white);
+    padding: 20px;
+    width: 280px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    cursor:pointer;
+}
+
+.card:hover {
+    background-color: var(--vintage-wine);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: var(--off-white);
+}
+
+.card a {
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about a {
+    color: var(--deep-blue);
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--deep-blue);
+    color: var(--off-white);
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--soft-gray);
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

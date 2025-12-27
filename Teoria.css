@@ -1,0 +1,165 @@
+/* COLOR VARIABLES */
+:root {
+  --deep-blue: #11212D;
+  --vintage-wine: #3F1521;
+  --off-white: #F8F6F3;
+  --soft-gray: #D3D3D3;
+}
+
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--deep-blue);
+
+    color: var(--soft-gray);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #111827;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var
+   (--vintage-wine) ;
+}
+
+.logo {
+font-size: 1.6em;
+font-weight: 600;
+font-family: 'Playfair Display',serif;
+color: var(--soft-gray);
+}
+
+.nav-links a:hover {
+  color: var(--vintage-wine);
+}
+
+/* MAIN CONTENT */
+.content {
+  padding: 3rem 2.2rem;
+  text-align: center;
+  flex-grow: 1;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+h1 {
+  color: var(--vintage-wine);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display',serif;
+}
+
+.subtitle {
+  color: var(--soft-gray);
+  font-size: 1.3rem;
+  margin-top: 0rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+p {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+/* THEORY CARD GRID */
+.theory-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); 
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+/* CARD DESIGN */
+.theory-card {
+  background-color: #1A2A35;
+  border: 1px solid var(--vintage-wine);
+  border-radius: 12px;
+  padding: 1.8rem;
+  color: var(--off-white);
+  text-align: left;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  transition: transform 0.3s ease,box-shadow 0.3s ease;
+}
+
+.theory-card h3 {
+  color: #D95C82; /*new pink */
+  .theory-card:hover h3 {
+    color: #E17A9D; /* brighter pink */
+  }
+  font-weight: 900;
+  /* extra bold for emphasis */
+  font-size: 1.5rem;
+  /* slightly larger for clarity */
+  margin-bottom: 0.7rem;
+  font-family: 'Playfair Display',serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4); /* subtle shadow for legibility*/
+  transition: color 0.3s ease;
+}
+
+/* Optional: hover effect to make it slightly brighter */
+.theory-card:hover h3 {
+  color: #7F2333; /* even brighter on hover */
+}
+
+
+.theory-card p {
+  color: var(--soft-gray);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.theory-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+/* READ MORE LINK */
+.read-more {
+  text-decoration: none;
+  color: var(--soft-gray);
+  border-bottom: 1px solid var(--vintage-wine);
+  padding-bottom: 0.15rem;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  color: var(--vintage-wine);
+}
+
+/* BUTTON */
+.back-btn {
+  display: inline-block;
+  color: var(--soft-gray);
+  text-decoration: none;
+  border: 1px solid var(--vintage-wine);
+  padding: 0.6rem 1.5rem;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+.back-btn:hover {
+  background-color: var(--vintage-wine);
+  color: var(--off-white);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  to {opacity: 1;}
+}

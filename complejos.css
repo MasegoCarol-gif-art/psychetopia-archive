@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family:'Georgia', serif;
+    background-color: #0A0F1C;
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #111827;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8B1E3F;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f2f2f2;
+}
+
+.nav-links a {
+    color: #f2f2f2;
+    margin-left: 1.5em;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8B1E3F;
+}
+
+/* MAIN CONTENT */
+.content {
+    padding: 3rem 2rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    border-bottom: 2px solid #8B1E3F;
+    display:inline-block;
+    color: #f2f2f2;
+}
+
+.complex-box {
+    background-color: #111827;
+    color: #eaeaea:
+    border-left: 4px solid #8B1E3F;
+    padding: 1em 1.5em;
+    margin: 1.5em auto;
+    max-width: 700px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3) ;
+    transition: transform 0.3s ease,
+    text-align: left;
+}
+
+.complex-box:hover {
+    transform: translateY(-6px);
+    background-color: #1f2937;
+}
+
+h2 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+a {
+    display: inline-block;
+    color: #f2f2f2;
+    margin-top: 2rem;
+    text-decoration: none;
+    border: 1px solid #8B1E3F;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #8B1E3F;
+    color: #0A0F1C;
+}
+
+.quote-visual {
+    text-align: center;
+    margin: 2.5rem 0 3rem;
+}
+
+.quote-image {
+    max-width: 95%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    margin-bottom: 1.2rem;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #D3D3D3;
+    margin: 0 auto;
+    max-width: 800px
+    padding: 0 1rem;
+}
+
+.film-credit {
+    display: block;
+    font-size: 0.9rem;
+    color: #8B1E3F;
+    margin-top: 0.4rem;
+}

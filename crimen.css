@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Georgia',serif;
+    background-color: #0D1A24;
+    color: #D6B4AA;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #111827;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #912F41;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #D6B4AA;
+}
+
+.nav-links a {
+    color: #D6B4AA;
+    margin-left: 1.5em;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a;hover {
+    color: #912f41;
+}
+
+/* MAIN CONTENT */
+.content {
+    padding: 3rem 2rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+h1 {
+    color: #912F41;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #912F41;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+a {
+    display: inline-block;
+    color: #D6B4AA;
+    margin-top: 2rem;
+    text-decoration: none;
+    border: 1px solid #912F41;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #912F41;
+    color: #0D1A24
+}
+
+.video-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.jung-video {
+    width: 100%;
+    max-width: 360px; /* keeps it smaller */
+    aspect-ratio: 16/ 9; /*preserves natural video shape */
+    border: 2px solid #912F41;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.video-caption {
+    font-style: italic;
+    color: #D6B4AA;
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+    text-align: center;
+}

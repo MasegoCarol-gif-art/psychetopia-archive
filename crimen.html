@@ -1,43 +1,84 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Criminal Minds| PsycheTopia </title>
-    <link rel="stylesheet" href="crimen.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criminal Minds | PsycheTopia</title>
+  <link rel="stylesheet" href="crimen.css" />
 </head>
 <body>
-    <nav>
+  <nav>
     <div class="logo">PsycheTopia</div>
     <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="complejos.html">Complexes</a>
-    <a href="theory-room.html">Theory Room</a>
-    <a href="audio.html">Audio</a>
-    <a href="media.html">Media</a>
+      <a href="index.html">Home</a>
+      <a href="complejos.html">Complexes</a>
+      <a href="Teoria.html">Theory Room</a>
+      <a href="audio.html">Audio</a>
+      <a href="media.html">Media</a>
+    <a href="shadow-files.html">Shadow-Files</a>
     </div>
-</nav>
+  </nav>
 
-<div class="content">
+  <div class="content">
     <section class="video-intro">
-<video controls class="jung-video">
-    <source src="jung-psychology.mp4" type="video/mp4">
+  <video controls class="Jung-video">
+    <source src="Jung-psychology.mp4" type="video/mp4">
     Your browser does not support the video tag.
-</video>
-<p class="video-caption">"We need more psychology."-Carl Gustav Jung</p>
+  </video>
+  <p class="video-caption">“We know nothing of man....his Psyche should be studied.” — Carl Gustav Jung</p>
 </section>
 
-<h1>Criminal Minds</h1>
-<p>
- Welcome to the dark chamber of 
- PsycheTopia-where we reflect on
- the minds society often deems 
- unredeemable.Explore featured book 
- reflections,psychological case files, 
- and neuronotes that examine the edges 
- of morality and cognition.
-</p>
-<a href="index.html">Back to home</a>
-</div>
+    <h1>Criminal Minds</h1>
+    <p>
+      Welcome to the dark chamber of PsycheTopia—where we reflect on the minds society often deems
+      unredeemable. Explore featured book reflections, psychological case files, and neuronotes that 
+      examine the edges of morality and cognition.
+    </p>
+
+<section class="drawer">
+  <button class="drawer-toggle">🗃️ Case Files</button>
+  <div class="drawer-content">
+    <p>Dive into infamous cases: Ed Kemper, Ted Bundy, Moses Sithole, and more.</p>
+    <!-- You can add article links/cards here -->
+  </div>
+</section>
+
+<section class="drawer">
+  <button class="drawer-toggle">🧠 Brain Corner</button>
+  <div class="drawer-content">
+    <p>Unpack the neuroscience behind criminal behavior—brain scans, trauma, psychopathy scores, etc.</p>
+  </div>
+</section>
+
+<section class="drawer">
+  <button class="drawer-toggle">🕰️ Historic Lens</button>
+  <div class="drawer-content">
+    <p>Trace the history of criminal psychology from Phineas Gage to modern forensics.</p>
+  </div>
+</section>
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </div>
+</body>
+  </div>
+  <script>
+  const toggles = document.querySelectorAll(".drawer-toggle");
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const content = toggle.nextElementSibling;
+
+      // Toggle open class
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        content.style.padding = "0 1rem";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.padding = "1rem";
+      }
+    });
+  });
+</script>
 </body>
 </html>

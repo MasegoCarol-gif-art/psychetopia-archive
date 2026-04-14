@@ -1,102 +1,139 @@
-body {
-    margin: 0;
-    font-family: 'Georgia',serif;
-    background-color: #0D1A24;
-    color: #D6B4AA;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* --- 1. THE FORENSIC DNA --- */
+:root {
+  --ink-midnight: #0D1117;   /* The base background */
+  --dossier-dark: #090D11;   /* A darker shade for the "Drawers" */
+  --vintage-wine: #3F1521;   /* The "Danger" color */
+  --blood-red: #630D16;      /* A brighter red for alerts/hover */
+  --off-white: #F8F6F3;
+  --typewriter-gray: #8A8A8A;
 }
 
-/* NAVIGATION */
+body {
+  background-color: var(--ink-midnight);
+  color: var(--off-white);
+  font-family: 'EB Garamond', serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- 2. NAVIGATION (Syncing with the rest of PsycheTopia) --- */
 nav {
-    background-color: #111827;
-    padding: 1em 2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #912F41;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5%;
+  background-color: #05080C;
+  border-bottom: 1px solid rgba(99, 13, 22, 0.2);
 }
 
 .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #D6B4AA;
+  font-family: 'Special Elite', monospace;
+  color: var(--vintage-wine);
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .nav-links a {
-    color: #D6B4AA;
-    margin-left: 1.5em;
-    text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s;
+  color: var(--typewriter-gray);
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-size: 0.8rem;
+  font-family: 'Courier Prime', monospace;
+  text-transform: uppercase;
 }
 
-.nav-links a;hover {
-    color: #912f41;
-}
-
-/* MAIN CONTENT */
-.content {
-    padding: 3rem 2rem;
-    text-align: center;
-    flex-grow: 1;
-}
-
-h1 {
-    color: #912F41;
-    font-size: 2.3rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #912F41;
-    display: inline-block;
-    padding-bottom: 0.3rem;
-}
-
-p {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.6;
-    font-size: 1.1rem;
-}
-
-a {
-    display: inline-block;
-    color: #D6B4AA;
-    margin-top: 2rem;
-    text-decoration: none;
-    border: 1px solid #912F41;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    transition: 0.3s ease;
-    font-weight: bold;
-}
-
-a:hover {
-    background-color: #912F41;
-    color: #0D1A24
-}
-
+/* --- 3. VIDEO INTRO --- */
 .video-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 5%;
 }
 
-.jung-video {
-    width: 100%;
-    max-width: 360px; /* keeps it smaller */
-    aspect-ratio: 16/ 9; /*preserves natural video shape */
-    border: 2px solid #912F41;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+.Jung-video {
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid var(--vintage-wine);
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+  filter: grayscale(0.5); /* Keep it slightly muted */
 }
 
 .video-caption {
-    font-style: italic;
-    color: #D6B4AA;
-    margin-top: 0.8rem;
-    font-size: 1.1rem;
-    text-align: center;
+  font-family: 'Special Elite', monospace;
+  color: var(--vintage-wine);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* --- 4. CONTENT & HEADERS --- */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 5% 5rem;
+}
+
+h1 {
+  font-family: 'Special Elite', monospace;
+  font-size: 2.4rem;
+  text-align: center;
+  letter-spacing: 4px;
+  color: var(--off-white);
+  border-bottom: 2px solid var(--vintage-wine);
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+/* --- 5. THE DRAWERS (The Tactical Interaction) --- */
+.drawer {
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--dossier-dark);
+}
+
+.drawer-toggle {
+  width: 100%;
+  padding: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--off-white);
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+}
+
+.drawer-toggle:hover {
+  background-color: var(--vintage-wine);
+}
+
+.drawer-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.3s ease;
+  background-color: #05080C;
+  font-family: 'EB Garamond', serif;
+  color: var(--typewriter-gray);
+}
+
+.drawer-content p {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+/* --- BACK LINK --- */
+.back-link a {
+  display: inline-block;
+  margin-top: 3rem;
+  color: var(--vintage-wine);
+  font-family: 'Courier Prime', monospace;
+  text-decoration: none;
+}
+
+.logo {
+  color: var(--vintage-wine);
+  filter: brightness(1.4); /* Makes that burgundy pop against the black nav */
 }

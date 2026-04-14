@@ -1,117 +1,135 @@
+/* --- THE DNA: BURGUNDY & MIDNIGHT --- */
 :root {
-    --deep-blue: #11212D;
-    --vintage-wine: #3F1521;
-    --off-white: #F8F6F3;
-    --soft-gray: #D3D3D3;
+  --deep-midnight: #050A0F;   /* The background void */
+  --vintage-wine: #3F1521;    /* Your core Deep Burgundy */
+  --wine-glow: #5C1E30;       /* The "Active" Burgundy pulse */
+  --off-white: #F8F6F3;       /* Clean reading text */
+  --soft-gray: #A9A9A9;       /* Secondary details */
 }
 
+/* --- GLOBAL BODY --- */
 body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background-color: var(--off-white);
-    color: var(--deep-blue)
+  margin: 0;
+  background-color: var(--deep-midnight);
+  color: var(--off-white);
+  font-family: 'EB Garamond', serif; /* The academic soul */
+  line-height: 1.7;
 }
 
-hader {
-    text-align: center;
-    padding: 60px 20px 30px;
-}
-
-header img {
-    max-width: 150;
-}
-
+/* --- THE QUOTE (Quien mira hacia dentro...) --- */
 header h1 {
-    font-size: 1.4rem;
-    margin-top: 20px;
-    font-style: italic;
-    color: var(--vintage-wine);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--off-white);
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 40px 20px;
+  letter-spacing: 1px;
 }
 
-#home-audio-intro {
-    text-align: center;
-    margin: 40px 0;
-}
-
-#home-audio-intro h2 {
-    font-family: 'Georgia', serif;
-    color: #3b3c36;
-}
-
-#home-audio-intro p {
-    color: #6b4c4c;
-}
-
-#home-audio-intro audio {
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-}
-
+/* --- THE NAVIGATION CARDS --- */
 .sections {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 25px;
 }
 
 .card {
-    background-color: var(--deep-blue);
-    color: var(--off-white);
-    padding: 20px;
-    width: 280px;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-    cursor:pointer;
+  background-color: var(--vintage-wine); /* Deep Burgundy Base */
+  color: var(--off-white);
+  padding: 35px;
+  width: 280px;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.05); /* Very subtle frame */
 }
 
+/* THE HOVER: The Burgundy Pulse */
 .card:hover {
-    background-color: var(--vintage-wine);
+  background-color: var(--wine-glow); /* Lighter Burgundy glow */
+  transform: translateY(-10px); /* Lifts like a discovery */
+  box-shadow: 0 15px 35px rgba(63, 21, 33, 0.5); /* Wine-colored shadow */
 }
 
+/* --- SUBSECTION TITLES (Clean Typewriter) --- */
 .card h2 {
-    margin-top: 0;
-    font-size: 1.2rem;
-    color: var(--off-white);
+  font-family: 'Courier Prime', monospace; /* Professional, clean typewriter */
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0;
+  color: var(--off-white);
 }
 
-.card a {
-    color: var(--off-white);
-    text-decoration: none;
+.card p {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.85;
 }
 
-.card a:hover {
-    text-decoration: underline;
+/* --- THE "ABOUT" & AUDIO SECTIONS --- */
+.about, #home-audio-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.about {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px 20px;
-    font-size: 1.1rem;
-    line-height: 1.6;
+#home-audio-intro h2 {
+  font-family: 'Courier Prime', monospace;
+  color: var(--soft-gray);
+  font-size: 1rem;
 }
 
 .about a {
-    color: var(--deep-blue);
-    font-weight: bold;
+  color: var(--vintage-wine);
+  font-family: 'Courier Prime', monospace;
+  font-weight: bold;
 }
 
+/* --- FOOTER ARCHIVE --- */
 footer {
-    background-color: var(--deep-blue);
-    color: var(--off-white);
-    text-align: center;
-    padding: 30px 10px;
-    margin-top: 40px;
+  background-color: #020406;
+  color: var(--soft-gray);
+  text-align: center;
+  padding: 40px 10px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+}
+
+/* --- THE FIX FOR THE ELECTRIC BLUE --- */
+.card a {
+  color: var(--off-white) !important; /* Forces the text to stay white/parchment */
+  text-decoration: none;               /* Removes the blue underline */
+}
+
+.card h2 {
+  color: var(--off-white);             /* Ensures the title stays parchment */
+}
+
+/* Optional: Make the title turn a soft Burgundy when you hover over the card */
+.card:hover h2 {
+  color: #F8F6F3;                      /* Or keep it parchment for clarity */
+}
+
+header img {
+  mix-blend-mode: screen; /* This hides the dark parts of an image on a light background, or try 'multiply' for the opposite */
+  opacity: 0.9; /* Makes it feel a bit more vintage and less "stark white" */
 }
 
 footer a {
-    color: var(--soft-gray);
-    text-decoration: none;
-    margin: 0 8px;
+  color: #630D16 !important; /* Your Vintage Wine */
+  text-decoration: none;
+  font-family: 'Courier Prime', monospace; /* Typewriter feel */
+  font-size: 0.8rem;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  color: var(--off-white); /* Glows white when you touch it */
 }

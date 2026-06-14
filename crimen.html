@@ -4,81 +4,141 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Criminal Minds | PsycheTopia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Courier+Prime&family=Special+Elite&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="crimen.css" />
 </head>
 <body>
-  <nav>
-    <div class="logo">PsycheTopia</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="complejos.html">Complexes</a>
-      <a href="Teoria.html">Theory Room</a>
-      <a href="audio.html">Audio</a>
-      <a href="media.html">Media</a>
-    <a href="shadow-files.html">Shadow-Files</a>
-    </div>
-  </nav>
 
+  <!-- NAVIGATION -->
+  <header>
+    <nav>
+      <div class="logo">PsycheTopia</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="complejos.html">Complexes</a>
+        <a href="Teoria.html">Theory Room</a>
+        <a href="shadow-files.html">Shadow-Files</a>
+        <a href="media.html">Media</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
   <div class="content">
+    
     <section class="video-intro">
-  <video controls class="Jung-video">
-    <source src="Jung-psychology.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <p class="video-caption">“We know nothing of man....his Psyche should be studied.” — Carl Gustav Jung</p>
-</section>
+      <video controls class="Jung-video">
+        <source src="Jung-psychology.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="video-caption">“We are the origin of all coming evil.” — Carl Gustav Jung</p>
+    </section>
 
     <h1>Criminal Minds</h1>
-    <p>
+    <p class="intro-text">
       Welcome to the dark chamber of PsycheTopia—where we reflect on the minds society often deems
       unredeemable. Explore featured book reflections, psychological case files, and neuronotes that 
       examine the edges of morality and cognition.
     </p>
 
-<section class="drawer">
-  <button class="drawer-toggle">🗃️ Case Files</button>
-  <div class="drawer-content">
-    <p>Dive into infamous cases: Ed Kemper, Ted Bundy, Moses Sithole, and more.</p>
-    <!-- You can add article links/cards here -->
-  </div>
-</section>
+    <!-- DOSSIER DRAWERS (OPTION 2: TIGHT LEDGER) -->
+    <div class="dossier-container">
 
-<section class="drawer">
-  <button class="drawer-toggle">🧠 Brain Corner</button>
-  <div class="drawer-content">
-    <p>Unpack the neuroscience behind criminal behavior—brain scans, trauma, psychopathy scores, etc.</p>
-  </div>
-</section>
+      <!-- DRAWER 1: CASE FILES -->
+      <section class="drawer">
+        <button class="drawer-toggle">🗃️ Case Files <span class="plus-icon">+</span></button>
+        <div class="drawer-content">
+          <div class="tight-ledger">
+            
+            <div class="ledger-row">
+              <span class="ledger-no">FILE.001</span>
+              <a href="sithole-file.html" class="ledger-title">Moses Sithole: Structural Trauma & Profiling Fractures</a>
+            </div>
 
-<section class="drawer">
-  <button class="drawer-toggle">🕰️ Historic Lens</button>
-  <div class="drawer-content">
-    <p>Trace the history of criminal psychology from Phineas Gage to modern forensics.</p>
-  </div>
-</section>
+            <div class="ledger-row">
+              <span class="ledger-no">FILE.002</span>
+              <a href="kemper-file.html" class="ledger-title">Ed Kemper: Intellectual Weaponization & Maternal Resentment</a>
+            </div>
+
+            <div class="ledger-row">
+              <span class="ledger-no">FILE.003</span>
+              <a href="bundy-file.html" class="ledger-title">Ted Bundy: The Fragmented Persona of a Narcissistic Shadow</a>
+            </div>
+            <!-- You can easily copy and paste more rows right here as your library grows! -->
+
+          </div>
+        </div>
+      </section>
+
+      <!-- DRAWER 2: BRAIN CORNER -->
+      <section class="drawer">
+        <button class="drawer-toggle">🧠 Brain Corner <span class="plus-icon">+</span></button>
+        <div class="drawer-content">
+          <div class="tight-ledger">
+            
+            <div class="ledger-row">
+              <span class="ledger-no">NEURO.001</span>
+              <a href="neuro-psychopathy.html" class="ledger-title">The Orbital Cortex Disconnect: Unpacking Empathy Deficits</a>
+            </div>
+
+            <div class="ledger-row">
+              <span class="ledger-no">NEURO.002</span>
+              <a href="trauma-development.html" class="ledger-title">Somatic Anchors: How Early Biological Stress Alters Cognition</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- DRAWER 3: HISTORIC LENS -->
+      <section class="drawer">
+        <button class="drawer-toggle">🕰️ Historic Lens <span class="plus-icon">+</span></button>
+        <div class="drawer-content">
+          <div class="tight-ledger">
+            
+            <div class="ledger-row">
+              <span class="ledger-no">HIST.001</span>
+              <a href="raskolnikov-reflection.html" class="ledger-title">Dostoevsky's Raskolnikov: Fever, Isolation, and Somatic Guilt</a>
+            </div>
+
+            <div class="ledger-row">
+              <span class="ledger-no">HIST.002</span>
+              <a href="phineas-gage.html" class="ledger-title">Phineas Gage: The Day a Crowbar Split Modern Forensics Open</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
     <div class="back-link">
-      <a href="index.html">← Back to Home</a>
+      <a href="index.html" class="back-btn">← Back to Home</a>
     </div>
   </div>
-</body>
-  </div>
+
+  <!-- SCRIPT -->
   <script>
-  const toggles = document.querySelectorAll(".drawer-toggle");
+    const toggles = document.querySelectorAll(".drawer-toggle");
 
-  toggles.forEach(toggle => {
-    toggle.addEventListener("click", () => {
-      const content = toggle.nextElementSibling;
+    toggles.forEach(toggle => {
+      toggle.addEventListener("click", () => {
+        const content = toggle.nextElementSibling;
+        const plusIcon = toggle.querySelector(".plus-icon");
 
-      // Toggle open class
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        content.style.padding = "0 1rem";
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        content.style.padding = "1rem";
-      }
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          if (plusIcon) plusIcon.textContent = "+";
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          if (plusIcon) plusIcon.textContent = "−";
+        }
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 /* --- 1. THE FORENSIC DNA --- */
 :root {
-  --ink-midnight: #0D1117;   /* The base background */
-  --dossier-dark: #090D11;   /* A darker shade for the "Drawers" */
-  --vintage-wine: #3F1521;   /* The "Danger" color */
-  --blood-red: #630D16;      /* A brighter red for alerts/hover */
+  --ink-midnight: #0D1117;   
+  --dossier-dark: #090D11;   
+  --vintage-wine: #3F1521;   
+  --blood-red: #630D16;      
   --off-white: #F8F6F3;
   --typewriter-gray: #8A8A8A;
 }
@@ -11,129 +11,221 @@
 body {
   background-color: var(--ink-midnight);
   color: var(--off-white);
-  font-family: 'EB Garamond', serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   line-height: 1.6;
 }
 
-/* --- 2. NAVIGATION (Syncing with the rest of PsycheTopia) --- */
+/* KILLS DEFAULT LINK COLORING */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- 2. NAVIGATION --- */
 nav {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 5%;
   background-color: #05080C;
   border-bottom: 1px solid rgba(99, 13, 22, 0.2);
+  align-items: center;
 }
 
 .logo {
   font-family: 'Special Elite', monospace;
+  font-size: 1.2rem;
   color: var(--vintage-wine);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  filter: brightness(1.4);
 }
 
 .nav-links a {
   color: var(--typewriter-gray);
-  text-decoration: none;
-  margin-left: 1.2rem;
-  font-size: 0.8rem;
+  margin-left: 12px;
+  font-size: 0.7rem;
   font-family: 'Courier Prime', monospace;
   text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--off-white);
 }
 
 /* --- 3. VIDEO INTRO --- */
 .video-intro {
   text-align: center;
   margin-bottom: 3rem;
-  padding: 2rem 5%;
+  padding: 2rem 0;
 }
 
 .Jung-video {
   width: 100%;
   max-width: 700px;
-  border: 1px solid var(--vintage-wine);
+  border: 1px solid rgba(63, 21, 33, 0.4);
   box-shadow: 0 0 30px rgba(0,0,0,0.8);
-  filter: grayscale(0.5); /* Keep it slightly muted */
+  filter: grayscale(0.4);
 }
 
 .video-caption {
   font-family: 'Special Elite', monospace;
   color: var(--vintage-wine);
-  font-size: 0.9rem;
+  filter: brightness(1.5);
+  font-size: 0.85rem;
   margin-top: 1rem;
+  letter-spacing: 1px;
 }
 
 /* --- 4. CONTENT & HEADERS --- */
 .content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 5% 5rem;
 }
 
 h1 {
   font-family: 'Special Elite', monospace;
-  font-size: 2.4rem;
-  text-align: center;
+  font-size: 2.2rem;
   letter-spacing: 4px;
-  color: var(--off-white);
-  border-bottom: 2px solid var(--vintage-wine);
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 10px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-/* --- 5. THE DRAWERS (The Tactical Interaction) --- */
+.intro-text {
+  color: var(--typewriter-gray);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 4rem;
+  line-height: 1.7;
+}
+
+/* --- 5. THE CLASSIFIED DRAWERS --- */
+.dossier-container {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
 .drawer {
-  margin-bottom: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   background-color: var(--dossier-dark);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .drawer-toggle {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.3rem 1.8rem;
   background: none;
   border: none;
   color: var(--off-white);
   font-family: 'Courier Prime', monospace;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .drawer-toggle:hover {
-  background-color: var(--vintage-wine);
+  background-color: rgba(63, 21, 33, 0.2);
+}
+
+.plus-icon {
+  font-family: 'Courier Prime', monospace;
+  color: var(--vintage-wine);
+  filter: brightness(1.5);
+  font-size: 1.2rem;
 }
 
 .drawer-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out, padding 0.3s ease;
+  transition: max-height 0.4s ease-out;
   background-color: #05080C;
-  font-family: 'EB Garamond', serif;
-  color: var(--typewriter-gray);
 }
 
-.drawer-content p {
-  padding: 1rem;
-  font-size: 1.1rem;
+/* --- 6. OPTION 2: THE INFINITE LEDGER ROWS --- */
+.tight-ledger {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.ledger-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ledger-row:last-child {
+  border-bottom: none; /* Keeps the bottom clean */
+}
+
+.ledger-no {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  color: var(--vintage-wine);
+  filter: brightness(1.8); /* Beautiful low-lit tracking number */
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.ledger-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--typewriter-gray);
+  line-height: 1.4;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+/* Smooth micro-interaction when a user scans the titles */
+.ledger-row:hover .ledger-title {
+  color: var(--off-white);
+  padding-left: 6px;
 }
 
 /* --- BACK LINK --- */
-.back-link a {
-  display: inline-block;
-  margin-top: 3rem;
-  color: var(--vintage-wine);
-  font-family: 'Courier Prime', monospace;
-  text-decoration: none;
+.back-link {
+  text-align: center;
 }
 
-.logo {
-  color: var(--vintage-wine);
-  filter: brightness(1.4); /* Makes that burgundy pop against the black nav */
+.back-btn {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--typewriter-gray);
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.back-btn:hover {
+  color: var(--off-white);
+}
+
+/* --- RESPONSIVE FIX --- */
+@media (max-width: 650px) {
+  .tight-ledger {
+    padding: 0.8rem 1.2rem;
+  }
+  .ledger-row {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem 0;
+  }
+  .ledger-title {
+    font-size: 1.1rem;
+  }
 }

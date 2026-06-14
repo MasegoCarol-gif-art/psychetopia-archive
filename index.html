@@ -4,53 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PsycheTopia</title>
+  
+  <!-- Google Fonts Grid -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Courier+Prime&family=Special+Elite&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+      <header>
+    <!-- Structural container wrapper for centering -->
+
   <header>
-    <!-- Logo of PsycheTopia -->
-  <img src="Psychetopialogo3.jpg" 
-     alt="Logo of PsycheTopia – a psychological and philosophical blog" 
-     width="150" />
+    <div class="header-logo-container">
+      <img src="Psychetopialogo3.jpg" 
+           alt="Logo of PsycheTopia – a psychological and philosophical blog" 
+           width="150" />
+    </div>
     <h1>“Quien mira hacia dentro, despierta.”</h1>
+
+    <div class="audio-intro-wrapper">
+      <p class="audio-label">Listen to a short welcome as we dive into the depths of the psyche</p>
+      <audio controls>
+        <source src="welcome-intro2.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
   </header>
 
-  <section id="home-audio-intro">
-    <h2>Welcome to PsycheTopia</h2>
-    <p>Listen to a short welcome as we dive into the depths of the psyche.</p>
-    <audio controls>
-      <source src="welcome-intro2.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-  </section>
 
+  <!-- NAVIGATION PILLARS MATRIX -->
   <section class="sections">
+    
+    <!-- CARD 1: THEORY ROOM -->
     <div class="card">
-      <h2><a href="Complex.html">complexes</a></h2>
-      <p>Reflections and analysis of psychological complexes.</p>
-    </div>
-    <div class="card">
-      <h2><a href="Teoria.html">theory-room</a></h2>
+      <h2><a href="Teoria.html">Theory-Room</a></h2>
       <p>Key psychological and philosophical frameworks explored.</p>
     </div>
+
+    <!-- CARD 2: CRIMINAL MINDS -->
     <div class="card">
-      <h2><a href="crimen.html">criminal-minds</a></h2>
+      <h2><a href="crimen.html">Criminal-Minds</a></h2>
       <p>The dark chamber—exploring the unredeemable mind.</p>
     </div>
+
+    <!-- CARD 3: COMPLEXES -->
     <div class="card">
-      <h2><a href="audio.html">Audio-musings</a></h2>
-      <p>Voice recordings and poetic ruminations from the soul.</p>
+      <h2><a href="Complex.html">Complexes</a></h2>
+      <p>Reflections and analysis of psychological complexes.</p>
     </div>
+
+    <!-- CARD 4: SHADOW FILES -->
     <div class="card">
-      <h2><a href="media.html">Media-zone</a></h2>
+      <h2><a href="shadow-files.html">Shadow-Files</a></h2>
+      <p>A cultural autopsy of our dark obsessions; analyzing the hidden archives of the mind and the devils we create in our own image.</p>
+    </div>
+
+    <!-- CARD 5: ANALYSE DU LIVRE -->
+    <div class="card">
+      <h2><a href="analyse-du-livre.html">Analyse du Livre</a></h2>
+      <p>The Literary Archive: deep-dive psychological post-mortems and character autopsies of profound literary texts.</p>
+    </div>
+
+    <!-- CARD 6: MEDIA ZONE -->
+    <div class="card">
+      <h2><a href="media.html">Media-Zone</a></h2>
       <p>Film interpretations and documentary recommendations.</p>
     </div>
-    
-    <div class="card">
-  <h2><a href="shadow-files.html">Shadow-Files</a></h2>
-  <p>A cultural autopsy of our dark obsessions; analyzing the hidden archives of the mind and the devils we create in our own image.</p>
-</div>
 
   </section>
 
@@ -65,15 +86,17 @@
     <p><a href="sobre.html">About Me</a></p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 PsycheTopia</p>
+    <footer>
+    <p>&copy; 2026 PsycheTopia</p>
     <p>
       <a href="#">About</a> |
       <a href="#">Contact</a> |
-      <a href="#">Instagram</a> |
+      <!-- Connected directly to your official Instagram network profile -->
+      <a href="https://www.instagram.com/psychetopia26?igsh=MTVqYWxxeHU0NXBhZg==" target="_blank" rel="noopener noreferrer">Instagram</a> |
       <a href="#">YouTube</a>
     </p>
   </footer>
+
 
 </body>
 </html>

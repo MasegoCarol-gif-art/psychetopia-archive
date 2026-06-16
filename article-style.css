@@ -1,0 +1,121 @@
+/* --- ARTICLE BLUEPRINT ANCHOR --- */
+
+.article-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 3rem 5% 6rem;
+}
+
+/* Custom layout rules for the headers */
+.article-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.book-tag {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #8B263E; /* High-contrast crimson */
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.article-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  color: #F8F6F3;
+  margin: 0 0 1.5rem 0;
+  font-style: italic;
+}
+
+.article-subject {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+  color: #8B263E;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Base Body Elements */
+.article-body p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #D1D5DB;
+  margin-bottom: 1.8rem;
+}
+
+/* Textbook Definition Box */
+.matrix-block {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.9rem;
+  background-color: #090D11;
+  border-left: 2px solid #8B263E;
+  padding: 1.5rem;
+  margin: 2.5rem 0;
+  color: #A9A9A9;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.matrix-label {
+  display: block;
+  font-family: 'Special Elite', monospace;
+  font-size: 0.75rem;
+  color: #F8F6F3;
+  margin-bottom: 0.6rem;
+  letter-spacing: 1px;
+}
+
+/* Historical Literary Quote Vault */
+.quote-vault {
+  background-color: rgba(63, 21, 33, 0.15); /* Tinted vintage-wine container */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  margin-top: 3.5rem;
+  border-radius: 2px;
+  text-align: left;
+}
+
+.quote-vault p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #A9A9A9;
+  margin-bottom: 1.5rem;
+}
+
+.quote-vault p:last-of-type {
+  margin-bottom: 0;
+}
+
+.quote-citation {
+  display: block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  font-style: normal;
+  margin-top: 1.2rem;
+  color: #8B263E;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Bottom Nav Adjustments */
+.back-btn {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #A9A9A9;
+  transition: color 0.2s ease;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.back-btn:hover {
+  color: #F8F6F3;
+}

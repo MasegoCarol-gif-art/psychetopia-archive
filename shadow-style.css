@@ -1,0 +1,226 @@
+/* --- ARCHIVAL COLOR MATRIX --- */
+:root {
+  --ink-midnight: #0D1117;   
+  --vintage-wine: #3F1521;   
+  --blood-red: #630D16;
+  --off-white: #F8F6F3;      
+  --soft-gray: #A9A9A9;      
+}
+
+/* --- RESET & BODY --- */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--ink-midnight);
+  color: var(--off-white);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* KILLS DEFAULT LINK COLORING */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- NAVIGATION --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background-color: #090D11; 
+  border-bottom: 1px solid rgba(63, 21, 33, 0.2); 
+}
+
+.logo {
+  font-family: 'Special Elite', monospace;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--vintage-wine);
+  text-transform: uppercase;
+  filter: brightness(1.4);
+}
+
+.nav-links a {
+  color: var(--soft-gray);
+  margin-left: 12px;
+  font-size: 0.7rem;
+  font-family: 'Courier Prime', monospace;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--off-white);
+}
+
+/* --- THE CINEMATIC HERO SECTION --- */
+.quote-visual {
+  text-align: center;
+  padding: 4rem 5% 1rem;
+}
+
+.quote-image {
+  max-width: 600px;
+  width: 100%;
+  filter: grayscale(1) contrast(1.15) brightness(0.85);
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  margin-bottom: 2rem;
+}
+
+blockquote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--off-white);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.film-credit {
+  display: block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  font-style: normal;
+  margin-top: 0.8rem;
+  color: var(--vintage-wine);
+  filter: brightness(1.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- CONTENT STRUCTURE --- */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 5% 5rem;
+}
+
+h1 {
+  font-family: 'Special Elite', monospace;
+  font-size: 2.2rem;
+  text-align: center;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  color: var(--off-white);
+  opacity: 0.9; 
+}
+
+/* --- MINIMALIST INDEX MATRIX --- */
+.complex-index {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 4rem;
+}
+
+/* Desktop layout rules */
+.complex-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.complex-row:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.complex-meta {
+  flex: 1;
+  min-width: 280px;
+}
+
+.complex-tag {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #8B263E; /* Matches the vibrant dark crimson tag in 1000061912.jpg */
+  display: block;
+  margin-bottom: 0.6rem;
+  letter-spacing: 1.5px;
+}
+
+.complex-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.6rem;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--off-white);
+}
+
+.complex-excerpt {
+  flex: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.complex-excerpt p {
+  color: var(--soft-gray);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.line-read-more {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #8B263E !important; 
+  letter-spacing: 1px;
+  white-space: nowrap;
+  align-self: flex-start;
+  transition: transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.complex-row:hover .line-read-more {
+  transform: translateX(5px);
+}
+
+/* --- BACK TO HOME LINK --- */
+.back-btn {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--soft-gray);
+  display: inline-block;
+  margin-top: 2rem;
+  transition: color 0.2s ease;
+}
+
+.back-btn:hover {
+  color: var(--off-white);
+}
+
+/* --- FORCE UNIFORM CELL PHONE STACKING --- */
+@media (max-width: 1024px) {
+  .complex-row {
+    flex-direction: column;
+    gap: 0.5rem; /* Forces tight architectural stacking like image 1000061992 */
+    padding: 2rem 0;
+  }
+  
+  .complex-meta, .complex-excerpt {
+    flex: none;
+    width: 100%;
+  }
+
+  .complex-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .line-read-more {
+    margin-top: 0.8rem;
+  }
+}

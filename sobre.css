@@ -1,0 +1,97 @@
+/* --- 1. THE PROFILE DNA --- */
+:root {
+  --ink-midnight: #0D1117;   /* Consistent background */
+  --vintage-wine: #3F1521;   /* Your signature Burgundy */
+  --off-white: #F8F6F3;       
+  --soft-gray: #A9A9A9;      
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--ink-midnight);
+  color: var(--off-white);
+  font-family: 'EB Garamond', serif; /* Elegant, literary feel */
+  line-height: 1.8;
+}
+
+/* --- 2. NAVIGATION (Synced) --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background-color: #090D11;
+  border-bottom: 1px solid rgba(63, 21, 33, 0.3);
+}
+
+.logo {
+  font-family: 'Special Elite', monospace;
+  font-size: 1.5rem;
+  color: var(--vintage-wine);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.nav-links a {
+  color: var(--off-white);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.8rem;
+  font-family: 'Courier Prime', monospace;
+  text-transform: uppercase;
+}
+
+/* --- 3. THE CONTAINER & PORTRAIT --- */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 10% 6rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Special Elite', monospace;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  color: var(--off-white);
+}
+
+img {
+  width: 100%;
+  max-width: 350px; /* Keeps the portrait elegant, not overwhelming */
+  height: auto;
+  border-radius: 2px; /* Sharp corners like a physical photograph */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  margin-bottom: 3rem;
+  filter: sepia(0.2) contrast(1.1); /* Subtle "vintage" filter to match the mood */
+}
+
+/* --- 4. THE BIO TEXT --- */
+p {
+  font-size: 1.25rem;
+  color: var(--off-white);
+  text-align: justify; /* Looks more like a book page */
+  margin-bottom: 3rem;
+  font-style: italic; /* Gives it a more "philosophical" tone */
+}
+
+/* --- 5. THE BACK LINK --- */
+a[href="Casa.html"] {
+  display: inline-block;
+  color: var(--vintage-wine);
+  font-family: 'Courier Prime', monospace;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+a[href="Casa.html"]:hover {
+  color: var(--off-white);
+  text-decoration: underline;
+}

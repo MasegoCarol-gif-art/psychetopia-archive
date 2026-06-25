@@ -1,8 +1,7 @@
-/* --- ARCHIVAL COLOR MATRIX --- */
+/* --- GLOBAL VARIABLES --- */
 :root {
   --ink-midnight: #0D1117;   
   --vintage-wine: #3F1521;   
-  --blood-red: #630D16;
   --off-white: #F8F6F3;      
   --soft-gray: #A9A9A9;      
 }
@@ -111,13 +110,12 @@ h1 {
   opacity: 0.9; 
 }
 
-/* --- MINIMALIST INDEX MATRIX --- */
+/* --- MINIMALIST INDEX MATRIX & SHADOW FILES ALIGNMENT --- */
 .complex-index {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 4rem;
 }
 
-/* Desktop layout rules */
 .complex-row {
   display: flex;
   align-items: flex-start;
@@ -137,54 +135,83 @@ h1 {
   min-width: 280px;
 }
 
-.complex-tag {
-  font-family: 'Courier Prime', monospace;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  color: #8B263E; /* Matches the vibrant dark crimson tag in 1000061912.jpg */
-  display: block;
-  margin-bottom: 0.6rem;
-  letter-spacing: 1.5px;
+/* FIX 1: Fixes the 'Case File // Archive' labels to match 'Archival File' exactly */
+.complex-tag, 
+.content p:not([class]):has-text("Case File"),
+.content div:not([class]):has-text("Case File") {
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 0.65rem !important;
+  text-transform: uppercase !important;
+  color: var(--vintage-wine) !important;
+  filter: brightness(1.8) !important;
+  display: block !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 0.4rem !important;
+  letter-spacing: 1px !important;
+  font-weight: normal !important;
 }
 
-.complex-title {
+/* Alternate broad selector fallback for the tags if the above experimental rule isn't parsed */
+.content > p:filter(contains("Case File")) {
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 0.65rem !important;
+  color: var(--vintage-wine) !important;
+  filter: brightness(1.8) !important;
+}
+
+/* FIX 2: Forces the elegant Serif font and warm white color onto the titles */
+.complex-title, 
+.content h2, 
+.content h3 {
   font-family: 'Playfair Display', serif !important;
-  font-size: 1.6rem;
-  margin: 0 0 1rem 0;
-  font-weight: 400;
-  line-height: 1.3;
-  color: var(--off-white);
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+  color: var(--off-white) !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 1rem !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.complex-title a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .complex-excerpt {
   flex: 1.8;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
-.complex-excerpt p {
-  color: var(--soft-gray);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
-  margin: 0;
-  line-height: 1.6;
+/* FIX 3: Forces the body text descriptions to be soft gray and standard size */
+.complex-excerpt p, 
+.content p {
+  color: var(--soft-gray) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.95rem !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.6 !important;
 }
 
-.line-read-more {
-  font-family: 'Courier Prime', monospace;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #8B263E !important; 
-  letter-spacing: 1px;
-  white-space: nowrap;
-  align-self: flex-start;
-  transition: transform 0.2s ease;
-  margin-top: 0.5rem;
-}
-
-.complex-row:hover .line-read-more {
-  transform: translateX(5px);
+/* FIX 4: Aligns the "EXAMINE FILE" and "ANALYZE" styling */
+.line-read-more, 
+.content a[class*="link"], 
+.content a[class*="more"] {
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  color: var(--vintage-wine) !important; 
+  filter: brightness(1.8) !important;
+  white-space: nowrap !important;
+  display: inline-block !important;
+  margin-top: 0.2rem !important;
+  margin-bottom: 2.5rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding-bottom: 2.5rem !important;
+  width: 100% !important;
 }
 
 /* --- BACK TO HOME LINK --- */
@@ -194,7 +221,7 @@ h1 {
   text-transform: uppercase;
   color: var(--soft-gray);
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   transition: color 0.2s ease;
 }
 
@@ -202,25 +229,38 @@ h1 {
   color: var(--off-white);
 }
 
-/* --- FORCE UNIFORM CELL PHONE STACKING --- */
-@media (max-width: 1024px) {
+/* --- RESPONSIVE FIX FOR MOBILE --- */
+@media (max-width: 850px) {
   .complex-row {
     flex-direction: column;
-    gap: 0.5rem; /* Forces tight architectural stacking like image 1000061992 */
-    padding: 2rem 0;
+    gap: 1rem;
+    padding: 1.8rem 0;
   }
   
   .complex-meta, .complex-excerpt {
     flex: none;
     width: 100%;
   }
+}
 
-  .complex-title {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  
-  .line-read-more {
-    margin-top: 0.8rem;
-  }
+/* Mobile Nav Stacking */
+@media (max-width: 768px) {
+    header, nav, .navigation-container { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin-bottom: 12px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
 }

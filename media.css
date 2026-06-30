@@ -189,3 +189,40 @@ h1 {
     margin-top: 0.5rem;
   }
 }
+
+
+/* --- FIXED NAVIGATION FOR MOBILE --- */
+@media (max-width: 768px) {
+    nav { 
+        display: flex;
+        flex-direction: column; /* Stacks logo on top, menu below */
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem 0;
+        gap: 1rem; /* Creates clean space between logo and links */
+    }
+
+    .logo {
+        margin-bottom: 0.5rem;
+        display: inline-block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Allows extra items to drop to a clean second line */
+        justify-content: center;
+        gap: 16px; /* Bumps up horizontal spacing between text links */
+        row-gap: 12px; /* Adds consistent vertical gaps if links wrap */
+        max-width: 90%; /* Prevents text from hugging edge of screens */
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .nav-links a {
+        margin-left: 0 !important; /* Clears desktop left-margin behavior */
+        font-size: 0.75rem; /* Makes text highly legible on mobile */
+        letter-spacing: 1px;
+        white-space: nowrap; /* Prevents single menu names from splitting */
+    }
+}

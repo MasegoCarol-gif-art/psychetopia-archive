@@ -63,10 +63,13 @@ nav {
 
 .Jung-video {
   width: 100%;
-  max-width: 700px;
+  max-width: 520px; /* Reduced from 700px for a better laptop fit */
+  height: auto;     /* Maintains correct cinematic aspect ratio */
   border: 1px solid rgba(63, 21, 33, 0.4);
   box-shadow: 0 0 30px rgba(0,0,0,0.8);
   filter: grayscale(0.4);
+  display: block;   
+  margin: 0 auto;   /* Safely centers the video asset */
 }
 
 .video-caption {
@@ -74,7 +77,7 @@ nav {
   color: var(--vintage-wine);
   filter: brightness(1.5);
   font-size: 0.85rem;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   letter-spacing: 1px;
 }
 
@@ -155,7 +158,7 @@ h1 {
   background-color: #05080C;
 }
 
-/* --- 6. OPTION 2: THE INFINITE LEDGER ROWS --- */
+/* --- 6. THE INFINITE LEDGER ROWS --- */
 .tight-ledger {
   display: flex;
   flex-direction: column;
@@ -171,14 +174,14 @@ h1 {
 }
 
 .ledger-row:last-child {
-  border-bottom: none; /* Keeps the bottom clean */
+  border-bottom: none; 
 }
 
 .ledger-no {
   font-family: 'Courier Prime', monospace;
   font-size: 0.75rem;
   color: var(--vintage-wine);
-  filter: brightness(1.8); /* Beautiful low-lit tracking number */
+  filter: brightness(1.8); 
   letter-spacing: 1px;
   white-space: nowrap;
 }
@@ -191,7 +194,6 @@ h1 {
   transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
-/* Smooth micro-interaction when a user scans the titles */
 .ledger-row:hover .ledger-title {
   color: var(--off-white);
   padding-left: 6px;
@@ -215,7 +217,9 @@ h1 {
   color: var(--off-white);
 }
 
-/* --- RESPONSIVE FIX --- */
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Ledger Layout Breakpoint */
 @media (max-width: 650px) {
   .tight-ledger {
     padding: 0.8rem 1.2rem;
@@ -230,39 +234,36 @@ h1 {
   }
 }
 
-
-/* --- FIXED NAVIGATION FOR MOBILE --- */
+/* Uniform Mobile Nav Breakpoint */
 @media (max-width: 768px) {
-    nav { 
+    header, nav { 
         display: flex;
-        flex-direction: column; /* Stacks logo on top, menu below */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
         padding: 1.5rem 0;
-        gap: 1rem; /* Creates clean space between logo and links */
+        gap: 1rem;
     }
 
     .logo {
-        margin-bottom: 0.5rem;
-        display: inline-block;
+        margin-bottom: 0.5rem; 
     }
 
     .nav-links {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; /* Allows extra items to drop to a clean second line */
+        flex-wrap: wrap; 
         justify-content: center;
-        gap: 16px; /* Bumps up horizontal spacing between text links */
-        row-gap: 12px; /* Adds consistent vertical gaps if links wrap */
-        max-width: 90%; /* Prevents text from hugging edge of screens */
+        gap: 16px; 
+        row-gap: 12px;
+        max-width: 90%;
         margin: 0 auto;
         padding: 0;
     }
-
+    
     .nav-links a {
-        margin-left: 0 !important; /* Clears desktop left-margin behavior */
-        font-size: 0.75rem; /* Makes text highly legible on mobile */
+        margin-left: 0 !important;
+        font-size: 0.75rem;
         letter-spacing: 1px;
-        white-space: nowrap; /* Prevents single menu names from splitting */
+        white-space: nowrap;
     }
 }
